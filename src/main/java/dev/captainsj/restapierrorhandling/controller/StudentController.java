@@ -3,6 +3,7 @@ package dev.captainsj.restapierrorhandling.controller;
 import dev.captainsj.restapierrorhandling.model.Student;
 import dev.captainsj.restapierrorhandling.service.StudentService;
 import dev.captainsj.restapierrorhandling.service.StudentServiceImpl;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,9 +18,12 @@ public class StudentController {
 
     @GetMapping("/{id}")
     public Student getStudent(@PathVariable(value = "id") Long id) {
-        Student response = studentService.findStudent(id);
+        return studentService.findStudent(id);
+    }
 
-        return response;
+    @PostMapping("/add")
+    public Student addStudent(@Valid @RequestBody Student student) {
+        return studentService.addStudent(student);
 
 
     }

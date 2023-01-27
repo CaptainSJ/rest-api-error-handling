@@ -7,4 +7,6 @@ import org.springframework.stereotype.Component;
 public interface StudentService {
 
    public Student findStudent(Long id);
+
+    Student addStudent(Student student);
 }

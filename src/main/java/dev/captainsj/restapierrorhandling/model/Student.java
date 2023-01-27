@@ -25,7 +25,7 @@ public class Student {
     @Column(name = "EMAIL")
     private String email;
 
-    @NotNull
+    @NotNull(message = "Standard is mandatory")
     @Column(name = "STANDARD")
     private Stnd std;
 
