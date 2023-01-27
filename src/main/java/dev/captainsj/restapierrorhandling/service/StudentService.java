@@ -1,8 +1,10 @@
 package dev.captainsj.restapierrorhandling.service;
 
-import org.springframework.stereotype.Service;
+import dev.captainsj.restapierrorhandling.model.Student;
+import org.springframework.stereotype.Component;
 
-@Service
-public class StudentService {
+@Component
+public interface StudentService {
 
+   public Student findStudent(Long id);
 }

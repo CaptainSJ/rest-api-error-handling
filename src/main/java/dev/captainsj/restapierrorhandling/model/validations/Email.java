@@ -1,4 +1,4 @@
-package dev.captainsj.restapierrorhandling.model.customValidation;
+package dev.captainsj.restapierrorhandling.model.validations;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Target({ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Email {
-    String message() default "Invalid Enail";
+    String message() default "Invalid Email";
 
     Class<?>[] groups() default {};
 

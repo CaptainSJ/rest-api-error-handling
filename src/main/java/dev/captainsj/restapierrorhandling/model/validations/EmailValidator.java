@@ -1,8 +1,7 @@
-package dev.captainsj.restapierrorhandling.model.customValidation;
+package dev.captainsj.restapierrorhandling.model.validations;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
-import org.hibernate.mapping.Constraint;
 
 public class EmailValidator implements ConstraintValidator<Email, String> {
 

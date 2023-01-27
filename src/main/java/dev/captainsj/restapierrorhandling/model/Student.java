@@ -1,12 +1,14 @@
 package dev.captainsj.restapierrorhandling.model;
 
-import dev.captainsj.restapierrorhandling.model.customValidation.Email;
+import dev.captainsj.restapierrorhandling.model.validations.Email;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import lombok.ToString;
 
 @Entity
 @Table(name = "STUDENT")
+@ToString
 public class Student {
 
     @Id
@@ -69,4 +71,7 @@ public class Student {
         this.email = email;
         this.std = std;
     }
+
+
+
 }
