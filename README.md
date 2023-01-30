@@ -6,9 +6,50 @@ the client or the requester.
 Also handles the Error thrown during model level validation and
 maps them to a subError List which contains the Rejected Value and Expected value details._
 
+### API Contract
 
-#### Spring Boot Version : 3.0.2
-#### Database used       : H2 In memeory Database
-#### JDK : 17
+**1. GET** `/api/student/{id}`
+> gets Student through given ID
+
+#### Response:
+```json
+{
+  "id" : 1,
+  "name" : "PanduRanga",
+  "email" : "panduranga@email.com",
+  "std" : "TENTH"
+}
+```
+---------------
+
+**2. POST** `/api/student/add`
+> adds the student into the database
+
+#### Request:
+```json
+{
+  "name" : "PanduRanga",
+  "email" : "panduranga@email.com",
+  "std" : "TENTH"
+}
+```
+
+#### Response:
+```json
+{
+  "name" : "PanduRanga",
+  "email" : "panduranga@email.com",
+  "std" : "TENTH"
+}
+```
+
+-----------------
+
+### Technical Specifications:
+```Text
+Spring Boot Version : 3.0.2
+Database used       : H2 In memeory Database
+JDK                 : 17
+```
 
 
