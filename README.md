@@ -6,7 +6,7 @@ the client or the requester.
 Also handles the Error thrown during model level validation and
 maps them to a subError List which contains the Rejected Value and Expected value details._
 
-### API Contract
+### API Details
 
 **1. GET** `/api/student/{id}`
 > gets Student through given ID
@@ -42,7 +42,20 @@ maps them to a subError List which contains the Rejected Value and Expected valu
   "std" : "TENTH"
 }
 ```
+----------------
+### Exception Format
+#### Response:
+```json
 
+{
+  "status": "NOT_FOUND",
+  "localDateTime": "30-01-2023 09:37:48",
+  "message": "Student was not found for parameters {id=5}",
+  "debugMessage": null,
+  "subErrors": null
+}
+
+```
 -----------------
 
 ### Technical Specifications:
